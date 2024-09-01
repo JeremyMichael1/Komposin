@@ -1,0 +1,54 @@
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e6d9c3;  /* Earthy background color */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.splash-logo {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.splash-logo.clicked {
+  opacity: 0.8;  /* Slightly reduce opacity for a subtle effect */
+  transform: scale(0.9);
+}
+
+.app-name {
+  margin-top: 0;
+  font-size: 34px;  /* Slightly larger for better emphasis */
+  color: #2e7d32;  /* Dark green color for contrast against the background */
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.tagline {
+  font-size: 18px;  /* Keep this consistent */
+  color: #4e4e4e;  /* Darker gray for better contrast and readability */
+  margin-top: 10px;
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Keyframes for fade in and fade out animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Optional: Fade out animation when clicked */
+.splash-screen.fade-out {
+  animation: fadeOut 2s ease-in-out;
+}
